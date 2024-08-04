@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 45px;
+  font-family: "Roboto", sans-serif;
+  background-color: #141414;
+  color: #273db4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dashboardContainer {
+  height: 80vh;
+  width: 80vw;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 8px;
+
+  animation: slideIn 1s ease-in-out;
+  flex-wrap: nowrap;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.containerHead {
+  width: 100%;
+  text-align: center;
+}
+.shortcut {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.shortcut > a {
+  padding: 8px 18px;
+  background-color: transparent;
+  width: 60px;
+  color: #00203fff;
+  text-decoration: none;
+  border-radius: 20px;
+
+  transition: color 0.5s ease-in-out, letter-spacing 0.5s ease-in-out;
+  text-align: center;
+}
+.shortcut > a[aria-disabled="true"] {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.shortcut > a:hover {
+  color: #adefd1ff;
+  letter-spacing: 1px;
+}
+h3 {
+  margin: 0;
+  color: #f95ca4;
+  font-size: 2em;
+  width: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background: #2c2e3a;
+  margin-bottom: 30px;
+}
+.menu {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 15px;
+}
+.card {
+  position: relative;
+  box-shadow: 10px 10px 60px #00000083, inset -10px -10px 60px #ffffff10;
+  transition: box-shadow 0.5s ease;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.student {
+  background-image: url("/image/student.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.interview {
+  background-image: url("/image/interview.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.job {
+  background-image: url("/image/job.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.card > a {
+  text-align: center;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  color: #b1624eff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+.cardDetails {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 15px;
+  transition: background 0.5s ease-in-out;
+  /* background: linear-gradient(to bottom, transparent, black); */
+}
+.cardDetails > div {
+  transform: translateY(40px);
+  opacity: 0;
+  padding: 15px 35px;
+  color: #adefd1ff;
+  transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+}
+.cardDetails > h4 {
+  transform: translateY(40px);
+  margin-bottom: 15px;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  color: #00203fff;
+  font-size: 1.5em;
+  width: 600;
+  letter-spacing: 1px;
+}
+
+.card:hover {
+  box-shadow: 10px 10px 60px #00000083, inset -10px -10px 60px #ffffff10,
+    0 0 20px rgba(245, 245, 245, 0.322);
+}
+.card:hover .cardDetails {
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.959));
+  opacity: 1;
+}
+
+.card:hover .cardDetails > div {
+  transform: translateY(-40px);
+  opacity: 1;
+}
+.card:hover .cardDetails > h4 {
+  transform: translateY(-40px);
+}

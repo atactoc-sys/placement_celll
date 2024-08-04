@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Interview</title>
+    <link rel="stylesheet" href="/Interview//ViewInterview.css">
+</head>
+
+<body>
+    <div class="viewIntervireContainer">
+        <div class="containerHead">
+            <div class="shortcut">
+                <div class="easynav">
+                    <a href="/interviews">Back</a>
+
+                </div>
+                <div class="det">
+                    <h3>
+                        Interview in <%= interview.company %>
+                    </h3>
+                    <h5>On <%= interview.date %>
+                    </h5>
+                </div>
+                <div class="logButton">
+                    <a href="/auth/logout">Logout</a>
+                </div>
+            </div>
+
+            <hr>
+        </div>
+        <div class="container">
+            <div class="allocated">
+                <h4>Allocated Students</h4>
+                <div class="tableChart">
+                    <table class="viewTable">
+                        <thead>
+                            <tr>
+                                <th class="nc">Name</th>
+                                <th class="rc">Result</th>
+                                <th class="ac">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% interview.students.forEach(student=> { %>
+                                <tr>
+                                    <td>
+                                        <%= student.name %>
+                                    </td>
+                                    <td>
+                                        <%= student.result %>
+                                    </td>
+                                    <td>
+                                        <form action="/interviews/updateResult" method="POST" class="tform">
+                                            <div>
+                                                <input type="hidden" name="interviewId" value="<%= interview._id %>">
+                                                <input type="hidden" name="studentId" value="<%= student._id %>">
+                                            </div>
+                                            <div>
+                                                <select name="result">
+                                                    <option value="PASS" <%=student.result==='PASS' ? 'selected' : '' %>
+                                                        >PASS</option>
+                                                    <option value="FAIL" <%=student.result==='FAIL' ? 'selected' : '' %>
+                                                        >FAIL</option>
+                                                    <option value="On Hold" <%=student.result==='On Hold' ? 'selected'
+                                                        : '' %>>On Hold</option>
+                                                    <option value="Didn’t Attempt" <%=student.result==='Didn’t Attempt'
+                                                        ? 'selected' : '' %>>Didn’t Attempt</option>
+                                                </select>
+                                            </div>
+                                            <button type="submit">Save</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="allocatemore">
+                <h4>Allocate More Students</h4>
+                <div class="formField">
+
+                    <form action="/interviews/allocate" method="POST">
+                        <div>
+                            <input type="hidden" name="interviewId" value="<%= interview._id %>">
+                            <select name="studentId">
+                                <% students.forEach(student=> { %>
+                                    <option value="<%= student._id %>">
+                                        <%= student.name %>
+                                    </option>
+                                    <% }) %>
+                            </select>
+                        </div>
+                        <button type="submit">Allocate</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

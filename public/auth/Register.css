@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 45px;
+  font-family: "Roboto", sans-serif;
+  background-color: #141414;
+  color: #273db4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.signupContainer {
+  height: 70vh;
+  width: 30vw;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  box-shadow: 10px 10px 60px #00000083, inset -10px -10px 60px #ffffff10;
+  animation: slideIn 1s ease-in-out;
+  flex-wrap: nowrap;
+  animation: slideIn 1s ease-in-out;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.signupHeader {
+  width: 100%;
+  text-align: center;
+}
+h3 {
+  margin: 0;
+  color: #f95ca4;
+  font-size: 1.8em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid #2c2e3a;
+  margin: 20px 0;
+}
+
+.formField {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+form > div {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin-bottom: 5px;
+  color: #ed7854;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #5cc8d7ff;
+  font-size: 1em;
+  outline: none;
+  border-bottom: #1e1e1e 1px solid;
+  border-radius: 8px;
+}
+input::placeholder {
+  color: #b1624eff;
+  font-style: italic;
+}
+input:focus {
+  border-bottom: 1px solid #61dafb1f;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #adefd1ff;
+  color: #00203fff;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 5px 5px 60px #0000009f, inset -5px -5px 60px #ffffff69;
+  outline: none;
+  border: none;
+  transition: background-color 0.5s ease, transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+button:hover {
+  background-color: #2d2926ff;
+  color: #e94b3cff;
+  box-shadow: 2px 2px 60px #ffffff69, inset -2px -2px 60px #0000009f;
+}
+
+button:active {
+  border-color: 1px solid whitesmoke;
+}
+
+a {
+  margin-top: 15px;
+  color: #61dafb;
+  text-decoration: none;
+  transition: color 0.5s ease;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: #21a1f1;
+}

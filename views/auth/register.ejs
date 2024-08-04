@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/auth/Register.css">
+</head>
+
+<body>
+    <div class="signupContainer">
+        <div class="signupHeader">
+            <h3>Sign up Here</h3>
+            <hr>
+        </div>
+        <div class="formField">
+            <form action="/auth/register" method="POST">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" required placeholder="Jhon Doe">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required placeholder="example@ex.com">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" required placeholder="********">
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        <p>Already have an account? <a href="/auth/login">Log in</a></p>
+    </div>
+</body>
+
+</html>

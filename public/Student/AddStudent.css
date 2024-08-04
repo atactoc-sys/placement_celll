@@ -1,0 +1,234 @@
+body {
+  margin: 0;
+  padding: 45px;
+  font-family: "Roboto", sans-serif;
+  background-color: #141414;
+  color: #273db4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.addStudentContainer {
+  position: relative;
+  height: 80vh;
+  width: 80vw;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 8px;
+
+  animation: slideIn 1s ease-in-out;
+  flex-wrap: nowrap;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.containerHead {
+  width: 100%;
+  text-align: center;
+}
+.shortcut {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.easynav {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.easynav > a {
+  padding: 8px 18px;
+  background-color: transparent;
+  width: 60px;
+  color: #00203fff;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: color 0.5s ease-in-out, letter-spacing 0.5s ease-in-out;
+  text-align: center;
+}
+.logButton {
+  display: flex;
+  gap: 15px;
+
+  justify-content: flex-end;
+}
+.logButton > a {
+  padding: 8px 18px;
+  background-color: transparent;
+  width: 60px;
+  color: #00203fff;
+  text-decoration: none;
+  border-radius: 20px;
+
+  transition: color 0.5s ease-in-out, transform 0.5s ease,
+    letter-spacing 0.5s ease-in-out;
+  text-align: center;
+}
+.easynav > a:hover {
+  color: #adefd1ff;
+  letter-spacing: 1px;
+}
+.logButton > a:hover {
+  color: #adefd1ff;
+  letter-spacing: 1px;
+}
+h3 {
+  margin: 0;
+  color: #f95ca4;
+  font-size: 2em;
+  width: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: letter-spacing 0.5s ease-in-out;
+}
+h3:hover {
+  letter-spacing: 3px;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background: #2c2e3a;
+  margin-bottom: 30px;
+}
+.formContainer {
+  padding: 15px 32px;
+  height: 100%;
+  width: -webkit-fill-available;
+  box-shadow: 10px 10px 60px #00000083, inset -10px -10px 60px #ffffff10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.firstColum {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.secondColum {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.firstColum > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.secondColum > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+label {
+  margin-bottom: 5px;
+  color: #ed7854;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #5cc8d7ff;
+  font-size: 1em;
+  outline: none;
+  border-bottom: #1e1e1e 1px solid;
+  border-radius: 8px;
+}
+input::placeholder {
+  color: #b1624eff;
+  font-style: italic;
+}
+input:focus {
+  border-bottom: 1px solid #61dafb1f;
+}
+select {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #5cc8d7ff;
+  font-size: 1em;
+  outline: none;
+  border-bottom: #1e1e1e 1px solid;
+  border-radius: 8px;
+}
+select:focus {
+  border-bottom: 1px solid #61dafb1f;
+}
+option {
+  background-color: #990011ff;
+  color: #fcf6f5ff;
+  padding: 10px;
+  border: none;
+  font-size: 1em;
+  border: transparent;
+  outline: none;
+}
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #adefd1ff;
+  color: #00203fff;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 5px 5px 60px #0000009f, inset -5px -5px 60px #ffffff69;
+  outline: none;
+  border: none;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out,
+    letter-spacing 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+button:hover {
+  background-color: #2d2926ff;
+  color: #e94b3cff;
+  letter-spacing: 2px;
+  box-shadow: 2px 2px 60px #ffffff69, inset -2px -2px 60px #0000009f;
+}
+
+button:active {
+  border-color: 1px solid whitesmoke;
+}

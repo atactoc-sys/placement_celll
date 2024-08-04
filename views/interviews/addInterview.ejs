@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Interview</title>
+    <link rel="stylesheet" href="/Interview/AddInterview.css">
+</head>
+
+<body>
+    <div class="addInterviewContainer">
+        <div class="containerHead">
+            <div class="shortcut">
+                <div class="easynav">
+                    <a href="/interviews">Back</a>
+                </div>
+                <h3>Add Interviews</h3>
+                <div class="logButton">
+                    <a href="/auth/logout">Logout</a>
+                </div>
+            </div>
+
+            <hr>
+        </div>
+        <div class="formContainer">
+            <div class="content">
+                <form action="/interviews/add" method="POST">
+                    <div>
+                        <label for="company">Company Name</label>
+                        <input type="text" name="company" required placeholder="XYZ">
+                    </div>
+                    <div>
+                        <label for="date">Date</label>
+                        <input type="date" name="date" required>
+                    </div>
+                    <button type="submit">Add Interview</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

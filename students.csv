@@ -1,0 +1,13 @@
+Student ID,Student Name,College,Status,DSA Final Score,WebD Final Score,React Final Score,Interview Date,Interview Company,Result
+,N/A,N/A,N/A,N/A,N/A,N/A,2024-07-25,Wipro,On Hold
+,N/A,N/A,N/A,N/A,N/A,N/A,2024-07-25,Wipro,On Hold
+,N/A,N/A,N/A,N/A,N/A,N/A,2024-07-25,Wipro,On Hold
+66a09a1f8260dc8f3adc396e,Natan,abc College,placed,8,8,8,2024-07-25,Wipro,On Hold
+66a09a7e8260dc8f3adc3974,Sumit,mno college,not_placed,9,9,9,2024-07-25,Wipro,On Hold
+66a3e88da769c4f4388c0b08,Ruchi,xyz College,placed,9,5,8,2024-07-25,Wipro,Didn’t Attempt
+66a3ea5ca769c4f4388c0b0f,Priti,abc College,not_placed,4,7,8,2024-07-25,Wipro,PASS
+66a09a7e8260dc8f3adc3974,Sumit,mno college,not_placed,9,9,9,2024-07-25,Tcs,PASS
+66a09aac8260dc8f3adc3977,Rakesh,asd,not_placed,9,9,8,2024-07-25,Tcs,FAIL
+66a3e826a769c4f4388c0b02,Nilu,abc College,placed,7,7,6,2024-07-25,Tcs,On Hold
+66a3e88da769c4f4388c0b08,Ruchi,xyz College,placed,9,5,8,2024-07-25,Tcs,FAIL
+66a09a4a8260dc8f3adc3971,Rita,xyz College,placed,9,9,9,2024-07-26,Epam,PASS

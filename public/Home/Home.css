@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 45px;
+  font-family: "Roboto", sans-serif;
+  background-color: #141414;
+  color: #273db4;
+  display: flex;
+
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  height: 60vh;
+  padding: 40px;
+  border-radius: 8px;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.intro h1 {
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  color: #f95ca4;
+}
+
+.about {
+  width: 750px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #ed7854;
+  margin-bottom: 30px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #2c2e3a;
+  margin-bottom: 30px;
+}
+
+.containerActionButton {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin: 30px 0px;
+  gap: 15px;
+  align-items: center;
+}
+a {
+  padding: 10px 25px;
+  background-color: #adefd1ff;
+  width: 60px;
+  color: #00203fff;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 5px 5px 60px #0000009f, inset -5px -5px 60px #ffffff69;
+  transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease1-in-out,
+    letter-spacing 0.5s ease-in-out;
+  text-align: center;
+}
+
+a:hover {
+  background-color: #2d2926ff;
+  color: #e94b3cff;
+  box-shadow: 2px 2px 60px #ffffff69, inset -2px -2px 60px #0000009f;
+  letter-spacing: 2px;
+}
+
+a:active {
+  border-color: 1px solid whitesmoke;
+}

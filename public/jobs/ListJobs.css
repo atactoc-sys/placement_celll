@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  padding: 45px;
+  font-family: "Roboto", sans-serif;
+  background-color: #141414;
+  color: #273db4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.jobContainer {
+  position: relative;
+  height: 80vh;
+  width: 80vw;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 8px;
+
+  animation: slideIn 1s ease-in-out;
+  flex-wrap: nowrap;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.containerHead {
+  width: 100%;
+  text-align: center;
+}
+.shortcut {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.easynav {
+  display: flex;
+  gap: 15px;
+
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.easynav > a {
+  padding: 8px 18px;
+  background-color: transparent;
+  width: 60px;
+  color: #00203fff;
+  text-decoration: none;
+  border-radius: 20px;
+
+  transition: color 0.5s ease-in-out, letter-spacing 0.5s ease-in-out;
+  text-align: center;
+}
+.logButton {
+  display: flex;
+  gap: 15px;
+
+  justify-content: flex-end;
+}
+.logButton > a {
+  padding: 8px 18px;
+  background-color: transparent;
+  width: 60px;
+  color: #00203fff;
+  text-decoration: none;
+  border-radius: 20px;
+
+  transition: color 0.5s ease-in-out, letter-spacing 0.5s ease-in-out;
+  text-align: center;
+}
+.easynav > a:hover {
+  color: #adefd1ff;
+  letter-spacing: 1px;
+}
+.logButton > a:hover {
+  color: #adefd1ff;
+  letter-spacing: 1px;
+}
+h3 {
+  margin: 0;
+  color: #f95ca4;
+  font-size: 2em;
+  width: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: letter-spacing 0.5s ease-in-out;
+}
+h3:hover {
+  letter-spacing: 3px;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background: #2c2e3a;
+  margin-bottom: 30px;
+}
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  width: 40vw;
+  height: 40vh;
+  box-shadow: 10px 10px 60px #00000083, inset -10px -10px 60px #ffffff10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h5 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin: 5px 0;
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: #e94b3cff;
+}
+a:hover {
+  text-decoration: none;
+  color: #00203fff;
+}
+
+.container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+}
+
+.container::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+.container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #000000;
+  border: 1px solid transparent;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="/Student/AddStudent.css">
+</head>
+
+<body>
+    <div class="addStudentContainer">
+        <div class="containerHead">
+            <div class="shortcut">
+                <div class="easynav">
+                    <a href="/students">Back</a>
+
+                </div>
+                <h3>Add Students</h3>
+                <div class="logButton">
+                    <a href="/auth/logout">Logout</a>
+                </div>
+            </div>
+
+            <hr>
+        </div>
+        <div class="formContainer">
+            <form action="/students/add" method="POST">
+                <div class="content">
+                    <div class="firstColum">
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" name="name" required placeholder="Jhon Doe">
+                        </div>
+                        <div><label for="college">College Name</label>
+                            <input type="text" name="college" required placeholder="RERF">
+                        </div>
+                        <div>
+                            <label for="status">Status</label>
+                            <select name="status" required>
+                                <option value="placed">Placed</option>
+                                <option value="not_placed">Not Placed</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="batch">Batch</label>
+                            <input type="text" name="batch" required placeholder="2020">
+                        </div>
+                    </div>
+                    <div class="secondColum">
+                        <div>
+                            <label for="dsa">DSA Final Score</label>
+                            <input type="number" name="dsa" required placeholder="88">
+                        </div>
+                        <div>
+                            <label for="webd">WebD Final Score</label>
+                            <input type="number" name="webd" required placeholder="88">
+                        </div>
+                        <div>
+                            <label for="react">React Final Score</label>
+                            <input type="number" name="react" required placeholder="88">
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Add Student</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

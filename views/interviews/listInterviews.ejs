@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Interviews</title>
+    <link rel="stylesheet" href="/Interview/InterciewList.css">
+</head>
+
+<body>
+    <div class="interciewContainer">
+        <div class="containerHead">
+            <div class="shortcut">
+                <div class="easynav">
+                    <a href="/dashboard">Back</a>
+
+                </div>
+                <h3>Interviews</h3>
+                <div class="logButton">
+                    <a href="/auth/logout">Logout</a>
+                </div>
+            </div>
+
+            <hr>
+        </div>
+        <div class="container">
+            <div class="actionButton">
+                <a href="/interviews/add">Add Interview</a>
+            </div>
+            <div class="tableChart">
+                <table class="interviewTable">
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Date</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% interviews.forEach(interview=> { %>
+                            <tr>
+                                <td>
+                                    <a href="/interviews/<%= interview._id %>">
+                                        <%= interview.company %>
+                                    </a>
+                                </td>
+                                <td>
+                                    <%= interview.date %>
+                                </td>
+
+                            </tr>
+                            <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
